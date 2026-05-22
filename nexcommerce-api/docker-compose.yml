@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:16
+
+    container_name: nexcommerce_db
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: nexpass
+      POSTGRES_DB: nexcommerce_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -1,0 +1,99 @@
+# =====================================================
+#  NexCommerce — .gitignore
+# =====================================================
+
+
+# ── SEGREDOS E CONFIGURAÇÕES SENSÍVEIS ──────────────
+# NUNCA suba esses arquivos — contêm senhas, tokens e chaves
+application-prod.properties
+application-staging.properties
+application-local.properties
+.env
+.env.*
+secrets.properties
+*.key
+*.pem
+*.p12
+*.jks
+
+
+# ── MAVEN ───────────────────────────────────────────
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+.mvn/wrapper/maven-wrapper.properties
+
+
+# ── JAVA ────────────────────────────────────────────
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+
+# ── IDEs ────────────────────────────────────────────
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+
+# ── SISTEMA OPERACIONAL ─────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+
+# ── DOCKER ──────────────────────────────────────────
+# Mantem o docker-compose.yml no repo, mas ignora overrides locais
+docker-compose.override.yml
+
+
+# ── LOGS ────────────────────────────────────────────
+*.log
+logs/
+spring.log
+
+
+# ── COBERTURA DE TESTES ─────────────────────────────
+/test-results/
+/coverage/
+jacoco.exec
