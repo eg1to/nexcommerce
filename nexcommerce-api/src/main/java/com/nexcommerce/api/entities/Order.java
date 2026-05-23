@@ -38,6 +38,7 @@ public class Order {
     private Address address;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private OrderStatus status;
 
     @Column(nullable = false)
