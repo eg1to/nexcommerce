@@ -49,6 +49,7 @@ public class Order {
     @PrePersist
     protected void prePersist() {
         this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     @Column(nullable = false)
