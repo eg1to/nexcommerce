@@ -1,5 +1,7 @@
 package com.nexcommerce.api.dto.user;
 
+import com.nexcommerce.api.entities.UserRole;
+
 import java.util.UUID;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +13,6 @@ public class UserResponseDTO {
     private UUID id;
     private String name;
     private String email;
-    private String role;
+    private UserRole role;
     
 }
